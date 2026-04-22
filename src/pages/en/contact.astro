@@ -10,18 +10,16 @@ const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 const minDate = tomorrow.toISOString().split('T')[0];
 
-// %%%BOOKING_CONDITIONS_EN_START%%%
 const terms = [
-  { title: 'Deposit', description: '20% after booking confirmation. Remaining payment 2 days before arrival.' },
-  { title: 'Cancellation', description: 'Free up to 1 day before arrival. After that 100% of the price.' },
-  { title: 'Check-in', description: '4:00 PM – 10:00 PM (other times by arrangement)' },
-  { title: 'Check-out', description: '7:00 AM – 11:00 AM (other times by arrangement)' },
-  { title: 'Key Handover', description: 'Via key box. Code will be provided before arrival.' },
-  { title: 'Baby Cot/Extra Bed', description: 'Free on request' },
-  { title: 'Pets', description: '15 EUR per pet' },
-  { title: 'Parking', description: 'Free' },
+  { title: 'Deposit', description: 'Eine Anzahlung in Höhe von 30 % des Gesamtbetrags ist innerhalb von 3 Tagen nach der Buchungsbestätigung fällig.' },
+  { title: 'Cancellation', description: 'Kostenlose Stornierung bis 3 Tage vor Anreise. Danach werden 50% des Gesamtbetrags berechnet.' },
+  { title: 'Check-in', description: '15:00 – 20:00 (other times by arrangement)' },
+  { title: 'Check-out', description: '08:00 – 10:00 (other times by arrangement)' },
+  { title: 'Key handover', description: 'Die Schlüsselübergabe erfolgt persönlich vor Ort. Bitte melden Sie sich 30 Minuten vor Anreise telefonisch.' },
+  { title: 'Crib/Extra bed', description: 'Babybett und Zustellbett auf Anfrage verfügbar. Bitte bei der Buchung angeben.' },
+  { title: 'Pets', description: 'Haustiere sind nach Absprache willkommen. Es fällt eine Reinigungspauschale von 30€ an.' },
+  { title: 'Parking', description: 'Ein kostenloser Parkplatz steht direkt am Haus zur Verfügung.' },
 ];
-// %%%BOOKING_CONDITIONS_EN_END%%%
 ---
 
 <Layout metadata={metadata}>
@@ -47,22 +45,7 @@ const terms = [
             </tr>
           </thead>
           <tbody class="text-muted dark:text-slate-400">
-            <!-- %%%PRICE_TABLE_ROWS_EN_START%%% -->
-            <tr class="border-b border-primary/10">
-              <td class="py-3 px-4 font-medium text-default dark:text-white">Alpenpanorama</td>
-              <td class="py-3 px-4">60 &euro;</td>
-              <td class="py-3 px-4">75 &euro;</td>
-              <td class="py-3 px-4">15 &euro;</td>
-              <td class="py-3 px-4">free</td>
-            </tr>
-            <tr>
-              <td class="py-3 px-4 font-medium text-default dark:text-white">Bergwiese</td>
-              <td class="py-3 px-4">45 &euro;</td>
-              <td class="py-3 px-4">60 &euro;</td>
-              <td class="py-3 px-4">15 &euro;</td>
-              <td class="py-3 px-4">free</td>
-            </tr>
-            <!-- %%%PRICE_TABLE_ROWS_EN_END%%% -->
+
           </tbody>
         </table>
       </div>
@@ -126,10 +109,7 @@ const terms = [
             <label for="apartment" class="block text-sm font-medium mb-1 dark:text-white">Apartment *</label>
             <select id="apartment" name="apartment" required class="w-full px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary">
               <option value="">Please select...</option>
-              <!-- %%%APARTMENT_OPTIONS_EN_START%%% -->
-              <option value="alpenpanorama">Alpenpanorama</option>
-              <option value="bergwiese">Bergwiese</option>
-              <!-- %%%APARTMENT_OPTIONS_EN_END%%% -->
+
             </select>
           </div>
 
